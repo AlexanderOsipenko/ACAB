@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{FA5A6919-57E7-E497-A31F-BDDA005F2D21}</ProjectGuid>
+    <ProjectGuid>{FD48BA37-4E36-139B-E4D0-921585A6CFBC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -61,18 +61,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\DistanceBetweenPlayerAndEnemy.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>D:/Clicker/2d animation/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>D:/Clicker/2d animation/ACAB/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Clicker/2d animation/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/Clicker/2d animation/ACAB/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/Clicker/2d animation/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/Clicker/2d animation/ACAB/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Clicker/2d animation/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/Clicker/2d animation/ACAB/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
