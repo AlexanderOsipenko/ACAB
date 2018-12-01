@@ -6,30 +6,37 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     
-    private float speed = 0.5F;
+    private float speed = 0.35F;
 
-    private GameObject object1, object2;
-
+    private GameObject character, enemy;
+    private Animator animator;
     private Vector3 direction;
 
     //public Collider2D coll;
     // Use this for initialization
-    void Start()
+    private void Start()
     {
-        object1 = GameObject.Find("character");
-        object2 = GameObject.Find("MOB");
+        character = GameObject.Find("character");
+        enemy = GameObject.Find("MOB");
         direction = transform.right;
     }
 
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        float distance = Vector3.Distance(object1.transform.position, object2.transform.position);
-        //transform.position + transform.up + transform.right * direction.x, 0.7F);
-        if (distance < 1.03F)
-        {
+        float distance = Vector3.Distance(character.transform.position, enemy.transform.position);
+        animator.SetFloat("distance", distance);
+        Debug.Log(distance);
+        if (distance < 1.045F)
+        { 
             speed = 0;
+            
+            animator.SetFloat("speed", speed);
         }
         else Move();
     }
@@ -37,6 +44,7 @@ public class Character : MonoBehaviour
     private void Move()
     {
         transform.position = Vector3.MoveTowards(transform.position, transform.position + direction, speed * Time.deltaTime);
-
+        animator.SetFloat("speed", speed);
     }
 }
+
